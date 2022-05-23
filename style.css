@@ -1,0 +1,34 @@
+html {
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    align-items: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+.board {
+    width: fit-content;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr  ;
+    gap: 0;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+}
