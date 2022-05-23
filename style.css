@@ -3,6 +3,7 @@ html {
     height: 100%;
     font-family: sans-serif;
     margin: 0;
+    background-color: bisque;
 }
 
 body {
@@ -13,10 +14,21 @@ body {
     justify-content: space-between;
     margin: 0;
     align-items: center;
+    --border-style : 3px solid rgb(200, 137, 59);
 }
 
 h1 {
     margin: 0;
+}
+
+.header {
+    height: 10vh;
+    display: flex;
+    box-shadow: 0px 0px 11px 2px rgba(255, 228, 196, 0.538);
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 238, 218);
 }
 
 .board {
@@ -28,7 +40,77 @@ h1 {
 }
 
 .square {
+    box-sizing: border-box;
     width: 100px;
     height: 100px;
-    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.square:hover {
+    background-color: rgba(236, 191, 137, 0.795);
+    box-shadow:0px 0px 11px 6px rgb(236, 191, 137, 0.795);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+}
+
+.options, .init{
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+
+button {
+    padding: 1em;
+    background-color: aliceblue;
+    border-radius: 3px;
+    border: 0;
+    transition: .4s;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background-color: rgb(173, 217, 255);
+    cursor: pointer;
+}
+
+.square[data-key='1'] {
+    border: var(--border-style);
+    border-top: 0;
+    border-bottom: 0;
+}
+.square[data-key='3'] {
+    border: var(--border-style);
+    border-left: 0;
+    border-right: 0;
+}
+.square[data-key='5'] {
+    border: var(--border-style);
+    border-right: 0;
+    border-left: 0;
+}
+.square[data-key='7'] {
+    border: var(--border-style);
+    border-bottom: 0;
+    border-top: 0;
+}
+.square[data-key='4'] {
+    border: var(--border-style);
+}
+
+.hidden {
+    display: none;
+}
+
+.footer {
+    padding: 1em;
 }

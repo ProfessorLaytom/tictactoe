@@ -14,11 +14,11 @@
         <h1>May the better player win !</h1>
     </div>
     <div class="container">
-        <div class="init" style="display: none;">
-            <button>Player V Player</button>
-            <button>Player V AI</button>
+        <div class="init">
+            <button class="pvp">Player V Player</button>
+            <button class="pve">Player V AI</button>
         </div>
-        <div class="board">
+        <div class="board hidden to-show">
             <div class="square"></div>
             <div class="square"></div>
             <div class="square"></div>
@@ -29,7 +29,10 @@
             <div class="square"></div>
             <div class="square"></div>
         </div>
-        <button>Restart</button>
+        <div class="options to-show hidden">
+            <button class="reset hidden to-show">Restart</button>
+            <button class="change-player hidden to-show">Change contestants</button>
+        </div>
     </div>
     <div class="footer">
         By Tom Dangleterre
